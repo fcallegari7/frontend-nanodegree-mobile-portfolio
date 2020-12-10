@@ -8,7 +8,20 @@
     <title>Fabio It: Portfolio</title>
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="//fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+    <!-- async CSS -->
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="//fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+    <!-- no-JS fallback -->
+    <noscript>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700">
+    </noscript>
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/print.css" rel="stylesheet" media="print">
